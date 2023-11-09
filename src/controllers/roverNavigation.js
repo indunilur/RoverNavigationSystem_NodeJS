@@ -15,7 +15,6 @@ const addRoverNavigationGrid = async (req, res) => {
     await addGrid(req.body.xCoordinate, req.body.yCoordinate);
     res.status(201).json({ message: "Successfully Created" });
   } catch (error) {
-    console.log("***error" + error);
     res.status(error.code).json({ message: error.message });
   }
 };
